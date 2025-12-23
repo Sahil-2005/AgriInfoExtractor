@@ -1,10 +1,8 @@
 import axios from "axios";
 
 const BASE_URL = "https://api.data.gov.in/resource";
-// const API_KEY = process.env.DATA_GOV_API_KEY;
-// const RESOURCE_ID = process.env.DATA_GOV_RESOURCE_ID;
-const API_KEY = '579b464db66ec23bdd0000011f00ed27da3b4c2d79adf8135d0593b3';
-const RESOURCE_ID = '35985678-0d79-46b4-9ed6-6f13308a1d24';
+const API_KEY = process.env.DATA_GOV_API_KEY;
+const RESOURCE_ID = process.env.DATA_GOV_RESOURCE_ID;
 
 export const fetchCropPrice = async ({
   state,

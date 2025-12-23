@@ -1,5 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config();
+import "./config/env.js";   
 import express from "express";
 import cors from "cors";
 import mandiRoutes from "./routes/mandi.routes.js";
@@ -15,6 +14,9 @@ app.use("/api/mandi", mandiRoutes);
 app.get("/", (_, res) => {
   res.send("Mandi Price API running");
 });
+
+console.log("API KEY:", process.env.DATA_GOV_API_KEY);
+console.log("RESOURCE:", process.env.DATA_GOV_RESOURCE_ID);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
